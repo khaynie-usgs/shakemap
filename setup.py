@@ -10,7 +10,7 @@ import shutil
 
 # This should be handled by conda when we install a platform-specific
 # compiler, but apparently isn't on macs (yet?)
-if shutil.which('clang') == None:
+if shutil.which('clang') is None:
     os.environ['CC'] = 'gcc'
 else:
     os.environ['CC'] = 'clang'
